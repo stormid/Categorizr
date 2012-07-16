@@ -55,6 +55,7 @@ class categorizr {
 
   public function detected()
   {
+    $this->detect();
     return $this->detected;
   }
 
