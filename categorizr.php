@@ -39,18 +39,14 @@ class categorizr {
 
   public function useragent( $ua = null )
   {
-    if ( $ua )
-      {
-        $this->useragent = $ua;
-        $this->detected = false;
-      }
+    if ( $ua ) 
+      $this->useragent = $ua;
     else
       return $this->useragent;
   }
 
   public function detect()
   {
-    // No need to detect again
     if ( $this->detected !== false )
       return;
     
@@ -78,7 +74,7 @@ class categorizr {
     else if ((preg_match('/GT-P10|SC-01C|SHW-M180S|SGH-T849|SCH-I800|SHW-M180L|SPH-P100|SGH-I987|zt180|HTC(.Flyer|\_Flyer)|Sprint.ATP51|ViewPad7|pandigital(sprnova|nova)|Ideos.S7|Dell.Streak.7|Advent.Vega|A101IT|A70BHT|MID7015|Next2|nook/i', $ua)) || (preg_match('/MB511/i', $ua)) && (preg_match('/RUTEM/i', $ua)))
       $this->detected = self::TABLET;
     
-    // Check if user agent is unique Mobile User Agent	
+    // Check if user agent is unique Mobile User Agent  
     else if ((preg_match('/BOLT|Fennec|Iris|Maemo|Minimo|Mobi|mowser|NetFront|Novarra|Prism|RX-34|Skyfire|Tear|XV6875|XV6975|Google.Wireless.Transcoder/i', $ua)))
       $this->detected = self::DESKTOP;
     
@@ -121,21 +117,29 @@ class categorizr {
 
   public function isMobile()
   {
+    if ( $this->detected === false )
+      $this->detect();
     return $this->detected == self::MOBILE;
   }
 
   public function isTablet()
   {
+    if ( $this->detected === false )
+      $this->detect();
     return $this->detected == self::TABLET;
   }
 
   public function isDesktop()
   {
+    if ( $this->detected === false )
+      $this->detect();
     return $this->detected == self::DESKTOP;
   }
 
   public function isTv()
   {
+    if ( $this->detected === false )
+      $this->detect();
     return $this->detected == self::TV;
   }
 
