@@ -53,6 +53,11 @@ class categorizr {
       return $this->useragent;
   }
 
+  public function detected()
+  {
+    return $this->detected;
+  }
+
   public function detect()
   {
     if ( $this->detected !== false )
