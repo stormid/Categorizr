@@ -90,11 +90,11 @@ class categorizr {
     
     // Check if user agent is unique Mobile User Agent	
     else if ((preg_match('/BOLT|Fennec|Iris|Maemo|Minimo|Mobi|mowser|NetFront|Novarra|Prism|RX-34|Skyfire|Tear|XV6875|XV6975|Google.Wireless.Transcoder/i', $this->useragent)))
-      $this->detected = self::DESKTOP;
+      $this->detected = self::MOBILE;
     
     // Check if user agent is an odd Opera User Agent - http://goo.gl/nK90K
     else if ((preg_match('/Opera/i', $this->useragent)) && (preg_match('/Windows.NT.5/i', $this->useragent)) && (preg_match('/HTC|Xda|Mini|Vario|SAMSUNG\-GT\-i8000|SAMSUNG\-SGH\-i9/i', $this->useragent)))
-      $this->detected = self::DESKTOP;
+      $this->detected = self::MOBILE;
     
     // Check if user agent is Windows Desktop
     else if ((preg_match('/Windows.(NT|XP|ME|9)/', $this->useragent)) && (!preg_match('/Phone/i', $this->useragent)) || (preg_match('/Win(9|.9|NT)/i', $this->useragent)))
