@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Categorizr", "src\Categorizr\Categorizr.csproj", "{8488B01B-AC02-47C8-9900-8AD571AC0CDA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Categorizr", "Categorizr\Categorizr.csproj", "{8488B01B-AC02-47C8-9900-8AD571AC0CDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Categorizr.Specs", "src\Categorizr.Specs\Categorizr.Specs.csproj", "{794F267F-8CE0-4699-81EF-4CFB8542F8F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Categorizr.Specs", "Categorizr.Specs\Categorizr.Specs.csproj", "{794F267F-8CE0-4699-81EF-4CFB8542F8F7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{32BF5F86-4473-42A7-9362-C68C5069B223}"
 	ProjectSection(SolutionItems) = preProject
