@@ -21,7 +21,7 @@ namespace Categorizr.Specs
                     var tests = new List<CategorizrTest>();
                     foreach (var useragent in useragents)
                     {
-                        var match = Regex.Match(useragent, "^\"(?<ua>[^\"]+)\",(?<expected>[\\w]+)$");
+                        var match = Regex.Match(useragent, "^\"(?<ua>[^\"]*)\",(?<expected>[\\w]+)$");
                         tests.Add(new CategorizrTest
                         {
                             Expected = (DeviceCategory)Enum.Parse(typeof(DeviceCategory), match.Groups["expected"].Value),
