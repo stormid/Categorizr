@@ -1,8 +1,8 @@
-﻿using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;
 
-namespace Categorizr
+namespace Categorizr.Impl
 {
-    public class Categorizr
+    public class Categorizr : ICategorizr
     {
         private readonly CategorizrOptions options;
 

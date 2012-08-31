@@ -40,10 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Categorizr.cs" />
     <Compile Include="CategorizrOptions.cs" />
     <Compile Include="DeviceCategory.cs" />
     <Compile Include="DeviceInformation.cs" />
+    <Compile Include="ICategorizr.cs" />
+    <Compile Include="Impl\Categorizr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

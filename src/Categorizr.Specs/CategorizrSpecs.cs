@@ -8,15 +8,15 @@ namespace Categorizr.Specs
 {
     public class CategorizrSpecs
     {
-        [Subject(typeof(Categorizr))]
+        [Subject(typeof(Impl.Categorizr))]
         public class when_testing_user_agents
         {
-            private static Categorizr subject;
+            private static Impl.Categorizr subject;
             private static IEnumerable<CategorizrTest> tests;
 
             Establish context = () =>
                 {
-                    subject = new Categorizr();
+                    subject = new Impl.Categorizr();
                     var useragents = File.ReadAllLines("useragents.csv");
                     var tests = new List<CategorizrTest>();
                     foreach (var useragent in useragents)
@@ -48,26 +48,26 @@ namespace Categorizr.Specs
                 };
         }
 
-        [Subject(typeof(Categorizr))]
+        [Subject(typeof(Impl.Categorizr))]
         public class when_categorizing_tablets_as_desktop
         {
-            private static Categorizr subject;
+            private static Impl.Categorizr subject;
             private static DeviceInformation result;
 
-            Establish context = () => subject = new Categorizr(new CategorizrOptions {CategorizeTabletsAsDesktops = true});
+            Establish context = () => subject = new Impl.Categorizr(new CategorizrOptions {CategorizeTabletsAsDesktops = true});
 
             Because of = () => result = subject.Detect("Mozilla/4.0 (compatible; Linux 2.6.10) NetFront/3.3 Kindle/1.0 (screen 600x800)");
 
             It should_be_desktop = () => result.Category.ShouldEqual(DeviceCategory.Desktop);
         }
 
-        [Subject(typeof(Categorizr))]
+        [Subject(typeof(Impl.Categorizr))]
         public class when_categorizing_tvs_as_desktop
         {
-            private static Categorizr subject;
+            private static Impl.Categorizr subject;
             private static DeviceInformation result;
 
-            Establish context = () => subject = new Categorizr(new CategorizrOptions {CategorizeTvsAsDesktops = true});
+            Establish context = () => subject = new Impl.Categorizr(new CategorizrOptions {CategorizeTvsAsDesktops = true});
 
             Because of = () => result = subject.Detect("Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.127 Large Screen Safari/533.4 GoogleTV/b54202");
 
