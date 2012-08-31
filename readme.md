@@ -13,11 +13,10 @@ PM> Install-Package Categorizr
 ## Usage
 
 <pre>
-var categorizr = new Categorizr(HttpContext.Current.Request.UserAgent);
-categorizr.Detect();
-var deviceCategory = categorizr.DeviceCategory;
+var categorizr = new Categorizr(CategorizrOptions.Default);
 
-if (categorizr.IsMobile())
+var deviceInfo = categorizr.Detect(HttpContext.Current.Request.UserAgent);
+if (deviceInfo.IsMobile())
 {
     // Do mobile stuff
 }

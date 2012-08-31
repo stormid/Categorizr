@@ -35,9 +35,7 @@ namespace Categorizr.Specs
                 {
                     foreach (var test in tests)
                     {
-                        subject.UserAgent = test.UserAgent;
-                        subject.Detect();
-                        test.Actual = subject.DetectedCategory;
+                        test.Actual = subject.Detect(test.UserAgent).Category;
                     }
                 };
 
@@ -54,32 +52,26 @@ namespace Categorizr.Specs
         public class when_categorizing_tablets_as_desktop
         {
             private static Categorizr subject;
+            private static DeviceInformation result;
 
-            Establish context = () =>
-                {
-                    subject = new Categorizr("Mozilla/4.0 (compatible; Linux 2.6.10) NetFront/3.3 Kindle/1.0 (screen 600x800)");
-                    Categorizr.CategorizeTabletsAsDesktops = true;
-                };
+            Establish context = () => subject = new Categorizr(new CategorizrOptions {CategorizeTabletsAsDesktops = true});
 
-            Because of = () => subject.Detect();
+            Because of = () => result = subject.Detect("Mozilla/4.0 (compatible; Linux 2.6.10) NetFront/3.3 Kindle/1.0 (screen 600x800)");
 
-            It should_be_desktop = () => subject.DetectedCategory.ShouldEqual(DeviceCategory.Desktop);
+            It should_be_desktop = () => result.Category.ShouldEqual(DeviceCategory.Desktop);
         }
 
         [Subject(typeof(Categorizr))]
         public class when_categorizing_tvs_as_desktop
         {
             private static Categorizr subject;
+            private static DeviceInformation result;
 
-            Establish context = () =>
-                {
-                    subject = new Categorizr("Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.127 Large Screen Safari/533.4 GoogleTV/b54202");
-                    Categorizr.CategorizeTvsAsDesktops = true;
-                };
+            Establish context = () => subject = new Categorizr(new CategorizrOptions {CategorizeTvsAsDesktops = true});
 
-            Because of = () => subject.Detect();
+            Because of = () => result = subject.Detect("Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.127 Large Screen Safari/533.4 GoogleTV/b54202");
 
-            It should_be_desktop = () => subject.DetectedCategory.ShouldEqual(DeviceCategory.Desktop);
+            It should_be_desktop = () => result.Category.ShouldEqual(DeviceCategory.Desktop);
         }
     }
 
