@@ -16,7 +16,7 @@ PM> Install-Package Categorizr
 var categorizr = new Categorizr(CategorizrOptions.Default);
 
 var deviceInfo = categorizr.Detect(HttpContext.Current.Request.UserAgent);
-if (deviceInfo.IsMobile())
+if (deviceInfo.IsMobile)
 {
     // Do mobile stuff
 }
