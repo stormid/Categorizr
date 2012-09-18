@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{32BF5F
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpRedirect", "Samples\HttpRedirect\HttpRedirect.csproj", "{1C40AA64-E9EE-4C10-8D76-997F35B8A3BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{DB0B3187-6031-432E-A414-F6AE5EFB696C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,8 +30,15 @@ Global
 		{794F267F-8CE0-4699-81EF-4CFB8542F8F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{794F267F-8CE0-4699-81EF-4CFB8542F8F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{794F267F-8CE0-4699-81EF-4CFB8542F8F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C40AA64-E9EE-4C10-8D76-997F35B8A3BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C40AA64-E9EE-4C10-8D76-997F35B8A3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C40AA64-E9EE-4C10-8D76-997F35B8A3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C40AA64-E9EE-4C10-8D76-997F35B8A3BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1C40AA64-E9EE-4C10-8D76-997F35B8A3BF} = {DB0B3187-6031-432E-A414-F6AE5EFB696C}
 	EndGlobalSection
 EndGlobal
