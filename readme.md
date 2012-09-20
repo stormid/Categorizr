@@ -27,7 +27,7 @@ The published NuGet package targets .NET Framework 2.0, so you can use this safe
 
 ## Device Detection Bad!
 
-I hear ya, but have a read of the article above. The appraoch Categorizr takes is to assume all devices are mobile unless the user agent suggests otherwise, which fits nicely with a mobile-first strategy. This works well because desktop user agents have been stable for some time and tablets are (generally) easy to identify. Any new unidentified devices will automatically end up in the mobile category without any updates.
+I hear ya, but have a read of the article above. The approach Categorizr takes is to assume all devices are mobile unless the user agent suggests otherwise, which fits nicely with a mobile-first strategy. This works well because desktop user agents have been stable for some time and tablets are (generally) easy to identify. Any new unidentified devices will automatically end up in the mobile category without any updates.
 
 ## Device Categories
 
