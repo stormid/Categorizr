@@ -40,9 +40,29 @@
     <Compile Include="DeviceCategory.cs" />
     <Compile Include="DeviceInformation.cs" />
     <Compile Include="ICategorizr.cs" />
+    <Compile Include="Impl\Conditions\AppleDesktopCondition.cs" />
+    <Compile Include="Impl\Conditions\AndroidTabletCondition.cs" />
     <Compile Include="Impl\Categorizr.cs" />
+    <Compile Include="Impl\Conditions\ConditionBaseBase.cs" />
+    <Compile Include="Impl\Conditions\ConsoleCondition.cs" />
+    <Compile Include="Impl\Conditions\DesktopAsBotCondition.cs" />
+    <Compile Include="ICategorizrCondition.cs" />
+    <Compile Include="Impl\Conditions\DesktopConditionBase.cs" />
+    <Compile Include="Impl\Conditions\MobileConditionBase.cs" />
+    <Compile Include="Impl\Conditions\SmartTvCondition.cs" />
+    <Compile Include="Impl\Conditions\SmartTvConditionBase.cs" />
+    <Compile Include="Impl\Conditions\TabletCondition.cs" />
+    <Compile Include="Impl\Conditions\TabletConditionBase.cs" />
+    <Compile Include="Impl\Conditions\KindleCondition.cs" />
+    <Compile Include="Impl\Conditions\PreHoneycombTabletCondition.cs" />
+    <Compile Include="Impl\Conditions\UniqueMobileUserAgentCondition.cs" />
+    <Compile Include="Impl\Conditions\OddOperaCondition.cs" />
+    <Compile Include="Impl\Conditions\WIndowsDesktopCondition.cs" />
+    <Compile Include="Impl\Conditions\LinuxDesktopCondition.cs" />
+    <Compile Include="Impl\Conditions\SolarisDesktopCondition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
