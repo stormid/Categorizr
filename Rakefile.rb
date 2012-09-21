@@ -44,7 +44,7 @@ end
 namespace :nuget do
 	nuspec :create do |nuspec|
 		nuspec.id = "Categorizr"
-		nuspec.version = "0.1.0"
+		nuspec.version = "0.1.1"
 		nuspec.authors = "Rory Fitzpatrick"
 		nuspec.description = "A modern device detection script"
 		nuspec.title = "Categorizr"
@@ -64,7 +64,7 @@ namespace :nuget do
 	
 	nugetpush :push, [:apikey] do |nuget, args|
 		nuget.command = ".nuget/Nuget.exe"
-		nuget.package = "release\\Categorizr.0.1.0.nupkg"
+		nuget.package = "release\\Categorizr.0.1.1.nupkg"
 		nuget.apikey = args.apikey
 	end
 end
