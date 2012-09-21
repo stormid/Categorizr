@@ -32,7 +32,7 @@ namespace :clean do
 	end
 end
 
-task :publish, [:apikey] => ['clean:release'] do |task, args|
+task :publish, [:apikey] => ['build', 'clean:release'] do |task, args|
 	Rake::Task['build:compile'].execute({:target => :Release})
 	mkdir_p("release/lib/net20")
 	cp "build/Categorizr.dll", "release/lib/net20"
