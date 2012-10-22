@@ -48,7 +48,7 @@ namespace :nuget do
 		nuspec.authors = "Rory Fitzpatrick"
 		nuspec.description = "A modern device detection script"
 		nuspec.title = "Categorizr"
-		nuspec.projectUrl = "https://github.com/roryf/Categorizr"
+		nuspec.projectUrl = "https://github.com/stormid/Categorizr"
 		nuspec.tags = "mobile device-detection"
 		nuspec.working_directory = "release"
 		nuspec.output_file = "Categorizr.nuspec"
