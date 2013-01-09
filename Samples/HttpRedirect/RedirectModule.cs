@@ -51,7 +51,7 @@ namespace HttpRedirect
 
         private static bool UrlHasOverride(Uri url)
         {
-            return url.Query.IndexOf("overrideMobile") > -1;
+            return url.Query.IndexOf("overrideMobile", StringComparison.Ordinal) > -1;
         }
 
         private static bool RequestHasOverrideCookie(HttpRequest request)
