@@ -135,7 +135,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Categorizr\Categorizr.csproj">
+    <ProjectReference Include="..\..\Categorizr\Categorizr.csproj">
       <Project>{8488B01B-AC02-47C8-9900-8AD571AC0CDA}</Project>
       <Name>Categorizr</Name>
     </ProjectReference>

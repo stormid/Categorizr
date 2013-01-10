@@ -16,7 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpRedirect", "Samples\Htt
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{DB0B3187-6031-432E-A414-F6AE5EFB696C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc", "Mvc\Mvc.csproj", "{C6771FF6-BF0F-43F6-8034-C1DE26CFD343}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc", "Samples\Mvc\Mvc.csproj", "{C6771FF6-BF0F-43F6-8034-C1DE26CFD343}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
